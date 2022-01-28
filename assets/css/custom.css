@@ -1,3 +1,21 @@
 .navbar-brand-box {
     text-align: left;
 }
+
+body[data-sidebar=dark] .mm-active .active i {
+    color: #54becc!important;
+}
+
+body[data-sidebar=dark] .mm-active .active {
+    color: #56becc!important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: .5rem;
+    color: #74788d;
+    font-family: dripicons-v2!important;
+    font-style: normal!important;
+    font-weight: 400!important;
+    content: "\6d";
+}
