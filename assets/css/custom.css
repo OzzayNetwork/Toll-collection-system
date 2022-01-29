@@ -38,3 +38,7 @@ table.dataTable th {
     height: 3rem;
     width: 3rem;
 }
+
+.form-control {
+    padding: 0.8rem;
+}
