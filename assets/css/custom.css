@@ -42,3 +42,7 @@ table.dataTable th {
 .form-control {
     padding: 0.8rem;
 }
+
+.auth-logo .auth-logo-dark {
+    height: 45px;
+}
