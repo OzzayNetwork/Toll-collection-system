@@ -19,3 +19,17 @@ body[data-sidebar=dark] .mm-active .active {
     font-weight: 400!important;
     content: "\6d";
 }
+
+.text-right {
+    text-align: right !important;
+}
+
+table.dataTable td,
+table.dataTable th {
+    vertical-align: middle;
+}
+
+.card-header {
+    background-color: rgb(85 110 230 / 16%);
+    padding-top: 1.25rem;
+}
