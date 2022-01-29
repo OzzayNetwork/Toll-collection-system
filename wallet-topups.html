@@ -14,13 +14,9 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
 
-    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
-
-
+    <!-- DataTables -->
     <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-
-
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -449,7 +445,7 @@
                         </li>
 
                         <li>
-                            <a href="trasactions.html" class="waves-effect">
+                            <a href="trasactions.html" class="waves-effect active">
                                 <i class="mdi mdi-cash-check"></i>
                                 <span key="t-chat">Transactions</span>
                             </a>
@@ -463,7 +459,7 @@
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="toll-takerlist.html" key="t-tui-calendar">Toll takers list</a></li>
-                                <li><a class="active" href="toll-takernew.html" key="t-full-calendar">Add a toll taker</a></li>
+                                <li><a href="toll-takernew.html" key="t-full-calendar">Add a toll taker</a></li>
                             </ul>
                         </li>
 
@@ -473,8 +469,8 @@
                                 <span>System Admins</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="admin-list.html" key="t-tui-calendar">Admins list</a></li>
-                                <li><a href="admin-new.html" key="t-full-calendar">Add an admin</a></li>
+                                <li><a href="calendar.html" key="t-tui-calendar">Admins list</a></li>
+                                <li><a href="calendar-full.html" key="t-full-calendar">Add an admin</a></li>
                             </ul>
                         </li>
 
@@ -539,12 +535,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Add an Admin</h4>
+                                <h4 class="mb-sm-0 font-size-18">Transactions</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Add an admin</li>
+                                        <li class="breadcrumb-item active">Transactions</li>
                                     </ol>
                                 </div>
 
@@ -557,76 +553,174 @@
 
                     <div class="row">
                         <div class="col-12">
-                            <div class="card p-4">
-
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Latest Transactions</h4>
+                                    <p>All transactions for <strong>Today</strong></p>
+                                </div>
                                 <div class="card-body">
-                                    <h4 class="card-title text-capitalize">Register a new System administrator</h4>
-                                    <p class="">Fill in the form bellow to register the system admin into the system. Once registered an OTP will be sent to the Just registered system administrator of which they are expected to use as their PIn for their very first
-                                        log in.</p>
-                                    <hr class="mb-5">
-                                    <form action="">
-
-                                        <!-- the names -->
-                                        <div class="row  mb-4 pb-2 align-items-center">
-                                            <label for="" class="col-form-label col-lg-2">First name <strong class="text-danger">*</strong></label>
-                                            <div class="col-lg-4">
-                                                <input id="" name="" type="text" class="form-control" placeholder="Enter the first name">
-                                            </div>
-
-                                            <label for="" class="col-form-label col-lg-2">Other Name(s) <strong class="text-danger">*</strong></label>
-                                            <div class="col-lg-4">
-                                                <input id="" name="" type="text" class="form-control" placeholder="Enter the other name(s)">
-                                            </div>
-                                        </div>
-
-                                        <!-- Identification -->
-                                        <div class="row  mb-4 pb-2 align-items-center">
-                                            <label for="" class="col-form-label col-lg-2">National ID Number<strong class="text-danger">*</strong></label>
-                                            <div class="col-lg-4">
-                                                <input id="" name="" type="text" class="form-control" placeholder="ID No.">
-                                            </div>
-
-                                            <label for="" class="col-form-label col-lg-2">Staff ID Number<strong class="text-danger">*</strong></label>
-                                            <div class="col-lg-4">
-                                                <input id="" name="" type="text" class="form-control" placeholder="Staff ID">
-                                            </div>
 
 
-                                        </div>
 
-                                        <!-- system roles -->
-                                        <div class="row mb-4 pb-2 align-items-center">
-                                            <label for="" class="col-form-label col-lg-2">System role <strong class="text-danger">*</strong></label>
-                                            <div class="col-4">
-                                                <select class="form-control select2" title="System role">
-                                                    <option >Read only</option>
-                                                    <option >System admin</option>
-                                                </select>
-                                            </div>
-                                        </div>
 
-                                        <!-- contact information -->
+                                    <table id="datatable-buttons" class="table  dt-responsive nowrap w-100 table-striped">
+                                        <thead class="table-dark">
+                                            <tr>
+                                                <th>Vehicle</th>
+                                                <th>Date</th>
+                                                <th>Paid By</th>
+                                                <th>Payment Method</th>
+                                                <th>Toll taker</th>
+                                                <th class="text-right">Amount</th>
+                                                <th>View details</th>
+                                            </tr>
+                                        </thead>
 
-                                        <div class="row mb-4 pb-2 align-items-center">
-                                            <label for="" class="col-form-label col-lg-2">Email address <strong class="text-danger">*</strong></label>
-                                            <div class="col-lg-4">
-                                                <input id="input-email" class="form-control input-mask" data-inputmask="'alias': 'email'" placeholder="Enter the email address">
-                                                <span class="text-muted">_@_._</span>
-                                            </div>
 
-                                            <label for="" class="col-form-label col-lg-2">Phone Number<strong class="text-danger">*</strong></label>
-                                            <div class="col-lg-4">
-                                                <input id="" name="" type="text" class="form-control" placeholder="Enter the other name(s)">
-                                            </div>
-                                        </div>
+                                        <tbody class="table-striped">
+                                            <tr>
+                                                <td class="">
+                                                    <p class="mb-0 pb-0"><strong>Motor Cycle</strong></p>
+                                                    <p class="mb-0 text-uppercase">UAX 136P</p>
 
-                                        <div class="row justify-content-end">
-                                            <div class="col-lg-10">
-                                                <button type="submit" class="btn btn-primary w-100"><i class="mdi mdi-account-plus-outline me-1"></i>Register Admin</button>
-                                            </div>
-                                        </div>
+                                                </td>
+                                                <td>2 Min ago</td>
+                                                <td>
+                                                    <a href="clients-profile.html">Omundu Kumundu</a>
+                                                </td>
+                                                <td>
+                                                    <i class="mdi mdi-cash-multiple"></i> Cash
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-capitalize">
+                                                        <a href="taker-profile.html"><strong>John Doe</strong></a>
+                                                    </p>
+                                                    <p class="mb-0 pb-0"> <a href="tel:0704549859">0704 549 859</a></p>
+                                                </td>
+                                                <td class="text-right text-uppercase"><strong>ugx 1,000</strong></td>
+                                                <td>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
+                                                        View Details
+                                                    </button>
+                                                </td>
+                                            </tr>
 
-                                    </form>
+                                            <tr>
+                                                <td class="">
+                                                    <p class="mb-0 pb-0"><strong>Salon Car</strong></p>
+                                                    <p class="mb-0 text-uppercase">UAX 136P</p>
+
+                                                </td>
+                                                <td>2 Min ago</td>
+                                                <td>
+                                                    <a href="clients-profile.html">Omundu Kumundu</a>
+                                                </td>
+                                                <td>
+                                                    <i class="mdi mdi-cash-multiple"></i> Cash
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-capitalize">
+                                                        <a href="taker-profile.html"><strong>John Doe</strong></a>
+                                                    </p>
+                                                    <p class="mb-0 pb-0"> <a href="tel:0704549859">0704 549 859</a></p>
+                                                </td>
+                                                <td class="text-right text-uppercase"><strong>ugx 2,000</strong></td>
+                                                <td>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
+                                                        View Details
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="">
+                                                    <p class="mb-0 pb-0"><strong>Lorry</strong></p>
+                                                    <p class="mb-0 text-uppercase">UAy 136P</p>
+
+                                                </td>
+                                                <td>2 Min ago</td>
+                                                <td>
+                                                    <a href="clients-profile.html">Mary Kavere</a>
+                                                </td>
+                                                <td>
+                                                    <i class="mdi mdi-qrcode-scan"></i> Wallet tag
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-capitalize">
+                                                        <a href="taker-profile.html"><strong>Jane Doe</strong></a>
+                                                    </p>
+                                                    <p class="mb-0 pb-0"> <a href="tel:0704549859">0704 549 859</a></p>
+                                                </td>
+                                                <td class="text-right text-uppercase"><strong>ugx 3,000</strong></td>
+                                                <td>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
+                                                        View Details
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="">
+                                                    <p class="mb-0 pb-0"><strong>Mini Bus</strong></p>
+                                                    <p class="mb-0 text-uppercase">UAr 122p</p>
+
+                                                </td>
+                                                <td>2 Min ago</td>
+                                                <td>
+                                                    <a href="clients-profile.html">Someone Chris</a>
+                                                </td>
+                                                <td>
+                                                    <i class="mdi mdi-cash-multiple"></i> Cash
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-capitalize">
+                                                        <a href="taker-profile.html"><strong>Lucy Kundaki</strong></a>
+                                                    </p>
+                                                    <p class="mb-0 pb-0"> <a href="tel:0704549859">0704 549 859</a></p>
+                                                </td>
+                                                <td class="text-right text-uppercase"><strong>ugx 3,000</strong></td>
+                                                <td>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
+                                                        View Details
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="">
+                                                    <p class="mb-0 pb-0"><strong>Minibus</strong></p>
+                                                    <p class="mb-0 text-uppercase">UAX 125o</p>
+
+                                                </td>
+                                                <td>2 Min ago</td>
+                                                <td>
+                                                    <a href="clients-profile.html">Ole Willy</a>
+                                                </td>
+                                                <td>
+                                                    <i class="mdi mdi-qrcode-scan"></i> Wallet tag
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 text-capitalize">
+                                                        <a href="taker-profile.html"><strong>John Doe</strong></a>
+                                                    </p>
+                                                    <p class="mb-0 pb-0"> <a href="tel:0704549859">0704 549 859</a></p>
+                                                </td>
+                                                <td class="text-right text-uppercase"><strong>ugx 3,000</strong></td>
+                                                <td>
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn btn-primary btn-sm btn-rounded waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".transaction-detailModal">
+                                                        View Details
+                                                    </button>
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -837,14 +931,6 @@
 
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js"></script>
-
-    <!-- form mask -->
-    <script src="assets/libs/inputmask/min/jquery.inputmask.bundle.min.js"></script>
-
-    <!-- form mask init -->
-    <script src="assets/js/pages/form-mask.init.js"></script>
-
-
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
