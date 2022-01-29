@@ -33,3 +33,8 @@ table.dataTable th {
     background-color: rgb(85 110 230 / 16%);
     padding-top: 1.25rem;
 }
+
+.avatar-xs {
+    height: 3rem;
+    width: 3rem;
+}
