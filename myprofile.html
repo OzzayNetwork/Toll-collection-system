@@ -14,6 +14,10 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.svg">
 
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
@@ -51,7 +55,7 @@
                                     <img src="assets/images/logo-light.svg" alt="" height="22">
                                 </span>
                             <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="19">
+                                    <img src="assets/images/logo-light.png" alt="" height="32">
                                 </span>
                         </a>
                     </div>
@@ -532,12 +536,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Profile</h4>
+                                <h4 class="mb-sm-0 font-size-18">My Profile</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Contacts</a></li>
-                                        <li class="breadcrumb-item active">Profile</li>
+                                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                        <li class="breadcrumb-item active">My profile</li>
                                     </ol>
                                 </div>
 
@@ -553,8 +557,8 @@
                                     <div class="row">
                                         <div class="col-7">
                                             <div class="text-primary p-3">
-                                                <h5 class="text-primary">Welcome Back !</h5>
-                                                <p>It will seem like simplified</p>
+                                                <h5 class="text-primary">Hello there !</h5>
+                                                <p>Here is some details about your account</p>
                                             </div>
                                         </div>
                                         <div class="col-5 align-self-end">
@@ -564,30 +568,32 @@
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-5">
                                             <div class="avatar-md profile-user-wid mb-4">
-                                                <img src="assets/images/users/avatar-1.jpg" alt="" class="img-thumbnail rounded-circle">
+                                                <div class="avatar-xs">
+                                                    <span class="avatar-title img-thumbnail rounded-circle rounded-circle bg-success bg-soft text-primary">
+                                                            <strong>AB</strong>
+                                                        </span>
+                                                </div>
                                             </div>
-                                            <h5 class="font-size-15 text-truncate">Cynthia Price</h5>
-                                            <p class="text-muted mb-0 text-truncate">UI/UX Designer</p>
+                                            <h5 class="font-size-15 text-truncate mb-0">Adroa Balinda</h5>
+                                            <p class="text-muted mb-0 text-truncate">Super Admin</p>
                                         </div>
 
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-7">
                                             <div class="pt-4">
 
                                                 <div class="row">
                                                     <div class="col-6">
-                                                        <h5 class="font-size-15">125</h5>
-                                                        <p class="text-muted mb-0">Projects</p>
+                                                        <h5 class="font-size-15 mb-0"><small>22 Min</small></h5>
+                                                        <p class="text-muted mb-0"><small>Log in Duration</small></p>
                                                     </div>
                                                     <div class="col-6">
-                                                        <h5 class="font-size-15">$1245</h5>
-                                                        <p class="text-muted mb-0">Revenue</p>
+                                                        <h5 class="font-size-15 mb-0"><small>22 Jan 2022</small></h5>
+                                                        <p class="text-muted mb-0"><small>Date registered</small></p>
                                                     </div>
                                                 </div>
-                                                <div class="mt-4">
-                                                    <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light btn-sm">View Profile <i class="mdi mdi-arrow-right ms-1"></i></a>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -599,90 +605,36 @@
                                 <div class="card-body">
                                     <h4 class="card-title mb-4">Personal Information</h4>
 
-                                    <p class="text-muted mb-4">Hi I'm Cynthia Price,has been the industry's standard dummy text To an English person, it will seem like simplified English, as a skeptical Cambridge.</p>
+                                    <p class="text-muted mb-4">Below are your registration details</p>
                                     <div class="table-responsive">
                                         <table class="table table-nowrap mb-0">
                                             <tbody>
                                                 <tr>
                                                     <th scope="row">Full Name :</th>
-                                                    <td>Cynthia Price</td>
+                                                    <td>Adroa Balinda</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Mobile :</th>
-                                                    <td>(123) 123 1234</td>
+                                                    <td>0704549859</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">E-mail :</th>
-                                                    <td>cynthiaskote@gmail.com</td>
+                                                    <td>email@email.com</td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Location :</th>
-                                                    <td>California, United States</td>
+                                                    <th scope="row">Staff ID</th>
+                                                    <td>DSSDF45655</td>
                                                 </tr>
+
+                                                <tr>
+                                                    <th scope="row">National ID</th>
+                                                    <td>12345678</td>
+                                                </tr>
+
+
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- end card -->
-
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title mb-5">Experience</h4>
-                                    <div class="">
-                                        <ul class="verti-timeline list-unstyled">
-                                            <li class="event-list active">
-                                                <div class="event-timeline-dot">
-                                                    <i class="bx bx-right-arrow-circle bx-fade-right"></i>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div class="flex-shrink-0 me-3">
-                                                        <i class="bx bx-server h4 text-primary"></i>
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        <div>
-                                                            <h5 class="font-size-15"><a href="javascript: void(0);" class="text-dark">Back end Developer</a></h5>
-                                                            <span class="text-primary">2016 - 19</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="event-list">
-                                                <div class="event-timeline-dot">
-                                                    <i class="bx bx-right-arrow-circle"></i>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div class="flex-shrink-0 me-3">
-                                                        <i class="bx bx-code h4 text-primary"></i>
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        <div>
-                                                            <h5 class="font-size-15"><a href="javascript: void(0);" class="text-dark">Front end Developer</a></h5>
-                                                            <span class="text-primary">2013 - 16</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="event-list">
-                                                <div class="event-timeline-dot">
-                                                    <i class="bx bx-right-arrow-circle"></i>
-                                                </div>
-                                                <div class="d-flex">
-                                                    <div class="flex-shrink-0 me-3">
-                                                        <i class="bx bx-edit h4 text-primary"></i>
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        <div>
-                                                            <h5 class="font-size-15"><a href="javascript: void(0);" class="text-dark">UI /UX Designer</a></h5>
-                                                            <span class="text-primary">2011 - 13</span>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
                                 </div>
                             </div>
                             <!-- end card -->
@@ -696,14 +648,14 @@
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <div class="flex-grow-1">
-                                                    <p class="text-muted fw-medium mb-2">Completed Projects</p>
+                                                    <p class="text-muted fw-medium mb-2">Agents approved</p>
                                                     <h4 class="mb-0">125</h4>
                                                 </div>
 
                                                 <div class="flex-shrink-0 align-self-center">
                                                     <div class="mini-stat-icon avatar-sm rounded-circle bg-primary">
                                                         <span class="avatar-title">
-                                                                <i class="bx bx-check-circle font-size-24"></i>
+                                                                <i class="mdi mdi-account-cash-outline font-size-24"></i>
                                                             </span>
                                                     </div>
                                                 </div>
@@ -716,14 +668,14 @@
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <div class="flex-grow-1">
-                                                    <p class="text-muted fw-medium mb-2">Pending Projects</p>
+                                                    <p class="text-muted fw-medium mb-2">Admins added</p>
                                                     <h4 class="mb-0">12</h4>
                                                 </div>
 
                                                 <div class="flex-shrink-0 align-self-center">
                                                     <div class="avatar-sm mini-stat-icon rounded-circle bg-primary">
                                                         <span class="avatar-title">
-                                                                <i class="bx bx-hourglass font-size-24"></i>
+                                                                <i class="mdi mdi-shield-account-outline font-size-24"></i>
                                                             </span>
                                                     </div>
                                                 </div>
@@ -736,14 +688,14 @@
                                         <div class="card-body">
                                             <div class="d-flex">
                                                 <div class="flex-grow-1">
-                                                    <p class="text-muted fw-medium mb-2">Total Revenue</p>
-                                                    <h4 class="mb-0">$36,524</h4>
+                                                    <p class="text-muted fw-medium mb-2">Toll takers added</p>
+                                                    <h4 class="mb-0">22</h4>
                                                 </div>
 
                                                 <div class="flex-shrink-0 align-self-center">
                                                     <div class="avatar-sm mini-stat-icon rounded-circle bg-primary">
                                                         <span class="avatar-title">
-                                                                <i class="bx bx-package font-size-24"></i>
+                                                                <i class="mdi mdi-boom-gate-up font-size-24"></i>
                                                             </span>
                                                     </div>
                                                 </div>
@@ -754,75 +706,74 @@
                             </div>
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title mb-4">Revenue</h4>
-                                    <div id="revenue-chart" class="apex-charts" dir="ltr"></div>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title mb-4">My Projects</h4>
+                                    <h4 class="card-title mb-4">My Logs</h4>
                                     <div class="table-responsive">
-                                        <table class="table table-nowrap table-hover mb-0">
+                                        <table class="table table-nowrap table-hover mb-0" id="datatable-buttons">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Projects</th>
-                                                    <th scope="col">Start Date</th>
-                                                    <th scope="col">Deadline</th>
-                                                    <th scope="col">Budget</th>
+                                                    <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Skote admin UI</td>
-                                                    <td>2 Sep, 2019</td>
-                                                    <td>20 Oct, 2019</td>
-                                                    <td>$506</td>
+                                                    <td>
+                                                        <h5 class="mb-1 font-size-15">Agent application approval</h5>
+                                                        <p class="text-muted">Approved <strong>Mr George Sinoti</strong> application for agency.</p>
+                                                        <div class="text-muted font-size-12"><i class="far fa-calendar-alt text-primary me-1"></i> 5 hrs ago</div>
+
+                                                    </td>
+
                                                 </tr>
 
                                                 <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Skote admin Logo</td>
-                                                    <td>1 Sep, 2019</td>
-                                                    <td>2 Sep, 2019</td>
-                                                    <td>$94</td>
+                                                    <td>
+                                                        <h5 class="mb-1 font-size-15">Agent application approval</h5>
+                                                        <p class="text-muted">Approved <strong>Mr George Sinoti</strong> application for agency.</p>
+                                                        <div class="text-muted font-size-12"><i class="far fa-calendar-alt text-primary me-1"></i> 5 hrs ago</div>
+
+                                                    </td>
+
                                                 </tr>
+
+
                                                 <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Redesign - Landing page</td>
-                                                    <td>21 Sep, 2019</td>
-                                                    <td>29 Sep, 2019</td>
-                                                    <td>$156</td>
+                                                    <td>
+                                                        <h5 class="mb-1 font-size-15">Agent application approval</h5>
+                                                        <p class="text-muted">Approved <strong>Mr George Sinoti</strong> application for agency.</p>
+                                                        <div class="text-muted font-size-12"><i class="far fa-calendar-alt text-primary me-1"></i> 5 hrs ago</div>
+
+                                                    </td>
+
                                                 </tr>
+
                                                 <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>App Landing UI</td>
-                                                    <td>29 Sep, 2019</td>
-                                                    <td>04 Oct, 2019</td>
-                                                    <td>$122</td>
+                                                    <td>
+                                                        <h5 class="mb-1 font-size-15">Agent application approval</h5>
+                                                        <p class="text-muted">Approved <strong>Mr George Sinoti</strong> application for agency.</p>
+                                                        <div class="text-muted font-size-12"><i class="far fa-calendar-alt text-primary me-1"></i> 5 hrs ago</div>
+
+                                                    </td>
+
                                                 </tr>
+
                                                 <tr>
-                                                    <th scope="row">5</th>
-                                                    <td>Blog Template</td>
-                                                    <td>05 Oct, 2019</td>
-                                                    <td>16 Oct, 2019</td>
-                                                    <td>$164</td>
+                                                    <td>
+                                                        <h5 class="mb-1 font-size-15">Agent application approval</h5>
+                                                        <p class="text-muted">Approved <strong>Mr George Sinoti</strong> application for agency.</p>
+                                                        <div class="text-muted font-size-12"><i class="far fa-calendar-alt text-primary me-1"></i> 5 hrs ago</div>
+
+                                                    </td>
+
                                                 </tr>
+
                                                 <tr>
-                                                    <th scope="row">6</th>
-                                                    <td>Redesign - Multipurpose Landing</td>
-                                                    <td>17 Oct, 2019</td>
-                                                    <td>05 Nov, 2019</td>
-                                                    <td>$192</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">7</th>
-                                                    <td>Logo Branding</td>
-                                                    <td>04 Nov, 2019</td>
-                                                    <td>05 Nov, 2019</td>
-                                                    <td>$94</td>
+                                                    <td>
+                                                        <h5 class="mb-1 font-size-15">Agent application approval</h5>
+                                                        <p class="text-muted">Approved <strong>Mr George Sinoti</strong> application for agency.</p>
+                                                        <div class="text-muted font-size-12"><i class="far fa-calendar-alt text-primary me-1"></i> 5 hrs ago</div>
+
+                                                    </td>
+
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -839,7 +790,7 @@
             <!-- End Page-content -->
 
 
-            favicon.
+
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">
@@ -855,7 +806,7 @@
                         </div>
                     </div>
                 </div>
-            </footer>svg
+            </footer>
         </div>
         <!-- end main content-->
 
@@ -932,6 +883,27 @@
 
     <!-- apexcharts -->
     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
 
     <script src="assets/js/pages/profile.init.js"></script>
 
