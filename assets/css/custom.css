@@ -46,3 +46,73 @@ table.dataTable th {
 .auth-logo .auth-logo-dark {
     height: 45px;
 }
+
+.font-28 {
+    font-size: 28px !important;
+}
+
+.font-21 {
+    font-size: 21px !important;
+}
+
+.btn-circle {
+    font-size: 18px;
+    border: 1px solid #92a7c2;
+    width: 40px;
+    height: 40px;
+    padding: 0.4rem;
+    border-radius: 50%;
+    border-style: dashed;
+}
+
+.btn-transparent {
+    background-color: transparent;
+}
+
+.btn-circle:hover {
+    border-style: solid;
+}
+
+.font-18px {
+    font-size: 18px !important;
+}
+
+.table-edits input,
+.table-edits select {
+    display: block;
+    width: 100%;
+    padding: .47rem .75rem;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* padding: 0.5rem 0.5rem; */
+    height: 35px;
+}
+
+.table-edits input:focus {
+    border-color: #556ee6;
+    border-width: 2px;
+}
+
+.table-edits .text-right input {
+    text-align: right;
+}
+
+.add-field {
+    cursor: pointer;
+}
+
+.add-field:hover {
+    color: #556ee6
+}
+
+.height-calc-21 {
+    height: calc(100% - 23px);
+}
