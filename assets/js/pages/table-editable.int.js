@@ -8,8 +8,9 @@ $(function() {
         keyboard: true,
         dblclick: false,
         button: true,
-        buttonSelector: ".edit,.save-tbl-btn, .cancel-changes",
         maintainWidth: true,
+        buttonSelector: ".edit,.save-tbl-btn, .cancel-changes",
+
 
         edit: function(t) {
 
