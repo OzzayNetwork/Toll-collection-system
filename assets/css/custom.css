@@ -176,3 +176,13 @@ table.dt-responsive ul {
     margin: 0px;
     padding: 0px;
 }
+
+.btn--icon--text i {
+    font-size: 20px;
+    margin-right: 1rem;
+    padding-right: 1rem;
+}
+
+.border-dash {
+    border: 1px solid dashed !important;
+}
