@@ -186,3 +186,44 @@ table.dt-responsive ul {
 .border-dash {
     border: 1px solid dashed !important;
 }
+
+.email-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: 0px;
+    bottom: 0px;
+    background: #00000052;
+    z-index: 1050;
+    /* display: none; */
+}
+
+.email-overlay .card {
+    border-radius: 0px;
+}
+
+.email-overlay>.header-item {
+    height: 50px;
+    color: white;
+}
+
+.email-overlay .card-header h4,
+.email-overlay .card-header .noti-icon i {
+    color: white;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.the-message-maker {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    max-width: 600px;
+}
+
+.mr-15px {
+    margin-right: 15px !important;
+}
