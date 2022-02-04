@@ -406,3 +406,11 @@ tr.unread td {
 .ml-7px {
     margin-left: 7px !important
 }
+
+.the-inbox .dataTables_length {
+    display: none;
+}
+
+.the-inbox .dataTables_filter {
+    display: none;
+}
