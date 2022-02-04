@@ -78,7 +78,8 @@ table.dataTable th {
 }
 
 .table-edits input,
-.table-edits select {
+.table-edits select,
+.the-message-maker input:focus {
     display: block;
     width: 100%;
     padding: .47rem .75rem;
@@ -196,6 +197,18 @@ table.dt-responsive ul {
     background: #00000052;
     z-index: 1050;
     /* display: none; */
+    /* transform: scaley(.5); */
+    transition: 0.3s;
+}
+
+.the-message-maker {
+    transform: scale(.1);
+    transform-origin: right bottom;
+    transition: 0.3s;
+}
+
+.email-overlay-transform {
+    transform: scale(1);
 }
 
 .email-overlay .card {
@@ -226,4 +239,67 @@ table.dt-responsive ul {
 
 .mr-15px {
     margin-right: 15px !important;
+}
+
+.mr-7px {
+    margin-right: 7px !important;
+}
+
+.upload-contacts .modal-content,
+.upload-contacts .modal-header,
+.selected-contacts .modal-header,
+.selected-contacts .modal-content {
+    border-radius: 0px;
+    border: none;
+}
+
+.mr-0 {
+    margin-right: 0px !important;
+}
+
+.pr-0 {
+    padding-right: 0px !important;
+}
+
+.ml-0 {
+    margin-left: 0px !important;
+}
+
+.pl-0 {
+    padding-left: 0px !important;
+}
+
+.the-selected-contacts {
+    width: 426px;
+    /* border: 1px solid; */
+    /* padding: 2px 5px; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    text-overflow: ellipsis;
+    /* height: 25px; */
+    display: block;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.selected-contacts .avatar-xs {
+    height: 2rem;
+    width: 2rem;
+}
+
+.selected-contacts .table>:not(caption)>*>* {
+    padding: 0.5rem .5rem;
+}
+
+.page-loader {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    z-index: 1000000;
+    position: fixed;
+    bottom: 1;
+    left: 1;
 }

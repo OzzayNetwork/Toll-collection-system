@@ -368,7 +368,7 @@
                             <div class="email-leftbar card">
 
 
-                                <button type="button" class="btn btn-primary waves-effect waves-light w-100 " data-bs-toggle="modal" data-bs-target="#composemodal">
+                                <button type="button" class="btn btn-primary waves-effect waves-light w-100 write-msg-btn">
                                     <i class="mdi mdi-pencil font-size-16 align-middle me-2"></i> Write Message
                                 </button>
 
@@ -789,8 +789,8 @@
             </div>
             <!-- End Page-content -->
 
-            <!-- Modal -->
-            <div class="modal fade" id="composemodal" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+            <!-- known contacts modal Modal -->
+            <div class="modal fade" id="composemodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -894,7 +894,7 @@
                                 <div class="mb-5">
                                     <label for="" class="mb-0 text-uppercase"><strong>Upload new contacts</strong></label>
                                     <p>
-                                        <a href="">Download contacts file sample before you continue</a>
+                                        <a href=""><i class="mdi mdi-download mr-15px"></i>Download contacts file sample before you continue</a>
                                     </p>
                                     <div class="p-4 bg-light">
                                         <div class="row ">
@@ -934,10 +934,185 @@
             </div>
             <!-- end modal -->
 
+            <!-- predeterminde uploading of contacts -->
+            <div class="modal fade upload-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="upload-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">Select contacts</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="mb-5">
+                                    <label for="" class="mb-0 text-uppercase"><strong>Upload new contacts</strong></label>
+                                    <p>
+                                        <a href=""><i class="mdi mdi-download mr-15px"></i>Download contacts file sample before you continue</a>
+                                    </p>
+                                    <div class="p-4 bg-light">
+                                        <div class="row ">
+
+                                            <div class="col-12">
+                                                <form action="#" class="dropzone">
+                                                    <div class="fallback">
+                                                        <input name="file" type="file" class="mb-3">
+                                                    </div>
+                                                    <div class="dz-message needsclick">
+                                                        <div class="mb-3">
+                                                            <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                                        </div>
+
+                                                        <h6>Contacts excell file</h6>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success upload-the-contacts">Upload contacts <i class="mdi mdi-account-details-outline  ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of predetermined -->
+
+            <!-- the selected contacts -->
+            <div class="modal fade selected-contacts" data-bs-backdrop="static" data-bs-keyboard="false" id="selected-contacts" tabindex="-1" role="dialog" aria-labelledby="composemodalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title text-white" id="composemodalTitle">My uploaded contacts</h5>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div class="">
+                                    <div class="row ">
+
+                                        <div class="col-12">
+                                            <div class="table-responsive">
+                                                <table class="table align-middle table-nowrap table-hover mb-0">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th scope="col" style="width: 70px;">#</th>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Email</th>
+                                                            <th scope="col">Phone</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        A
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Alex Wanjala</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        J
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Juliet Kemboi</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        T
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Tesfa Oze</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        M
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Moureen Akinyi</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="avatar-xs">
+                                                                    <span class="avatar-title rounded-circle">
+                                                                        S
+                                                                    </span>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark">Salome Aringo</a></h5>
+
+                                                            </td>
+                                                            <td>david@skote.com</td>
+                                                            <td>0704549859</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end of the selected contacts -->
+
 
 
             <!-- the message composer -->
-            <div class="email-overlay">
+            <div class="email-overlay d-none">
                 <div class="card the-message-maker">
                     <div class="card-header bg-primary text-white py-0">
                         <div class="d-flex justify-content-between align-items-center text-white">
@@ -948,7 +1123,7 @@
                                         <i class="bx bx-fullscreen"></i>
                                     </button>
 
-                                    <button type="button" class="btn header-item noti-icon waves-effect">
+                                    <button type="button" class="btn header-item noti-icon waves-effect close-message-maker">
                                         <i class="mdi mdi-close"></i>
                                     </button>
                                 </div>
@@ -957,9 +1132,28 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
+                            <div class="col-12 d-none selected-contacts-message">
+                                <div class="row flex-nowrap">
+                                    <div class="col-1 mr-0  w-auto d-flex ">
+                                        <span class=" ">
+                                            <strong>To:</strong>
+                                        </span>
+                                    </div>
+                                    <div class=" col-11 ml-0 pl-0 flex-wrap d-flex align-items-start">
+                                        <span class="the-selected-contacts text-capitalize">Alex wanjala, juliet kemboi, tesfa ozem, moureen akinyi, salome aringo,kelvin kamau, william njuguna</span>
+                                        <span data-bs-toggle="modal" data-bs-target="#selected-contacts" class="btn-link waves-effect float-left ">+23 Others</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
                             <div class="col-12">
                                 <div class="pb-3">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#composemodal" class="btn btn-success waves-effect btn-label waves-light"><i class="bx bxs-user-detail label-icon"></i> Select contacts</button>
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#composemodal" class="btn btn-success waves-effect btn-label waves-light d-none"><i class="bx bxs-user-detail label-icon"></i> Select contacts</button>
+                                </div>
+
+                                <div class="pb-3">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#upload-contacts" class="btn btn-success waves-effect btn-label waves-light"><i class="mdi-account-details-outline mdi label-icon"></i> Upload Contacts</button>
                                 </div>
 
                             </div>
@@ -1058,6 +1252,7 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 
 
