@@ -16,6 +16,10 @@ $(window).on('load', function() {
             $('.email-overlay').addClass('d-none');
         }, 200);
 
+    });
+
+    $('body').on('click', '.minimize', function() {
+        $(this).parent().parent().parent().parent().siblings().toggleClass('d-none');
     })
 
 });

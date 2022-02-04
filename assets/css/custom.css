@@ -253,6 +253,10 @@ table.dt-responsive ul {
     border: none;
 }
 
+.p-0 {
+    padding: 0px !important;
+}
+
 .mr-0 {
     margin-right: 0px !important;
 }
@@ -270,7 +274,7 @@ table.dt-responsive ul {
 }
 
 .the-selected-contacts {
-    width: 426px;
+    max-width: 426px;
     /* border: 1px solid; */
     /* padding: 2px 5px; */
     white-space: nowrap;
@@ -279,6 +283,17 @@ table.dt-responsive ul {
     text-overflow: ellipsis;
     /* height: 25px; */
     display: block;
+    width: auto;
+    max-width: 80vw;
+}
+
+.the-msg {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    text-overflow: ellipsis;
+    width: auto;
+    max-width: 10vw;
 }
 
 .float-left {
@@ -302,4 +317,92 @@ table.dt-responsive ul {
     position: fixed;
     bottom: 1;
     left: 1;
+}
+
+.ml-7px {
+    margin-left: 7px !important;
+}
+
+.the-inbox .checkbox-wrapper-mail input {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.the-inbox .checkbox-wrapper-mail label {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 0;
+    cursor: pointer;
+    opacity: 0;
+    margin-bottom: 0;
+    -webkit-transition-duration: .05s;
+    transition-duration: .05s;
+    top: 0;
+}
+
+.the-inbox .col-mail-1 .checkbox-wrapper-mail {
+    margin: 15px 10px 0 20px;
+}
+
+.the-inbox .col-mail-1 .checkbox-wrapper-mail,
+.the-inbox .col-mail-1 .dot,
+.the-inbox .col-mail-1 .star-toggle {
+    display: block;
+    float: left;
+}
+
+.the-inbox .checkbox-wrapper-mail {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    display: inline-block;
+    -webkit-box-shadow: inset 0 0 0 1px #ced4da;
+    box-shadow: inset 0 0 0 1px #ced4da;
+    border-radius: 1px;
+}
+
+.the-inbox td,
+.the-inbox th {
+    color: #74788d;
+}
+
+.the-inbox {
+    padding: 0px;
+}
+
+.the-inbox td,
+.the-inbox th {
+    height: 50px;
+}
+
+.the-inbox tr td:first-child {
+    padding-left: 10px;
+}
+
+.the-inbox tbody tr th:first-child {
+    padding-left: 15px;
+}
+
+.the-inbox tbody tr td:last-child {
+    padding-right: 15px;
+}
+
+.the-inbox tr {
+    cursor: pointer;
+}
+
+tr.unread td {
+    color: rgb(41, 45, 50);
+}
+
+.the-inbox tr.unread {
+    background-color: rgb(246, 246, 246);
+    font-weight: 500;
+    color: rgb(41, 45, 50);
+}
+
+.ml-7px {
+    margin-left: 7px !important
 }
