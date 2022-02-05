@@ -93,6 +93,28 @@
                             </form>
                         </div>
                     </div>
+                    <div class="dropdown d-inline-block">
+                        <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="header-lang-img" src="assets/images/flags/uganda.png" alt="Header Language" height="16">
+                            <span id="header-lang-currency">UGX</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+
+                            <!-- USD dollers-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="usd">
+                                <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">USD</span>
+                            </a>
+                            <!-- uganda money -->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ugx">
+                                <img src="assets/images/flags/uganda.png" alt="user-image" class="me-1" height="12"> <span class="align-middle">UGX</span>
+                            </a>
+
+                            <!-- kenya-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="kes">
+                                <img src="assets/images/flags/kenya.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">KES</span>
+                            </a>
+                        </div>
+                    </div>
 
                     <div class="dropdown d-none d-lg-inline-block ms-1">
                         <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
@@ -837,6 +859,11 @@
     <script src="assets/js/pages/dashboard.init.js"></script>
     <!-- Saas dashboard init -->
     <script src="assets/js/pages/saas-dashboard.init.js"></script>
+
+    <!-- currency converter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/money.js/0.2.0/money.min.js" integrity="sha512-Uv+htgH6sOoowXXo7l7iieSRizHDNwYor+RZVc4/HQ340/yDCeXvdJebdReUk7LgWzxIrRRUM1T+MvLCHFbsHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 
 
 
