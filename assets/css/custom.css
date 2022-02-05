@@ -296,6 +296,15 @@ table.dt-responsive ul {
     max-width: 10vw;
 }
 
+.number-of-rows {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    text-overflow: ellipsis;
+    width: auto;
+    max-width: 8vw;
+}
+
 .float-left {
     float: left !important;
 }
@@ -413,4 +422,30 @@ tr.unread td {
 
 .the-inbox .dataTables_filter {
     display: none;
+}
+
+@media (max-width: 576px) {
+    .mr-sm-0 {
+        margin: 0px !important;
+    }
+    .card {
+        border-radius: 0px;
+    }
+    .page-title-box {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .page-content {
+        padding-right: 0px;
+        padding-right: 0px;
+    }
+    .page-content,
+    .container-fluid {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .px-sm-30px {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
 }
