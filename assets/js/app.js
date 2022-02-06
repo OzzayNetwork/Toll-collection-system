@@ -4,17 +4,46 @@
         n = "en";
 
     function a(e) {
-        document.getElementById("header-lang-img") && ("usd" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/us.jpg" : "ugx" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/uganda.png" : "kes" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/kenya.jpg" : "it" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/italy.jpg" : "ru" == e && (document.getElementById("header-lang-img").src = "assets/images/flags/russia.jpg"), localStorage.setItem("language", e), null == (t = localStorage.getItem("language")) && a(n), s.getJSON("assets/lang/" + t + ".json", function(e) { s("html").attr("lang", t), s.each(e, function(e, t) { "head" === e && s(document).attr("title", t.title), s("[key='" + e + "']").text(t) }) }));
+        document.getElementById("header-lang-img") && ("UGX" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/uganda.png" : "USD" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/us.jpg" : "KES" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/kenya.jpg" : "it" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/italy.jpg" : "ru" == e && (document.getElementById("header-lang-img").src = "assets/images/flags/russia.jpg"));
         var theCurrency = e;
-        if (theCurrency == "usd") {
-            $('#header-lang-currency').text("USD")
-        }
-        if (theCurrency == "ugx") {
-            $('#header-lang-currency').text("UGX")
-        }
-        if (theCurrency == "kes") {
-            $('#header-lang-currency').text("KES")
-        }
+
+        // currency conversion starts here
+        // alert($('.data-carrency').last);
+        $('.data-carrency').each(function(index) {
+            var base_currency = $(this).attr("data-base");
+            var base_amount = $(this).attr("data-amount");
+            $(this).attr("data-selected-currency", theCurrency);
+            $(this).attr("data-selected-currency");
+            var the_new_value = 0;
+            var theIndex = $(this).index();
+
+            //alert(index)
+            //alert("the index is" + theIndex);
+            $('.the-currency').text(theCurrency).addClass("text-uppercase");
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://fixer-fixer-currency-v1.p.rapidapi.com/convert?from=" + base_currency + "&to=" + theCurrency + "&amount=" + base_amount + " ",
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "fixer-fixer-currency-v1.p.rapidapi.com",
+                    "x-rapidapi-key": "e567644a3dmshde69e5218507697p14e1f1jsnbd76df3e5cd5"
+                }
+            };
+
+            $.ajax(settings).done(function(response) {
+                // console.log(response);
+                the_new_value = response.result
+                console.log(numeral(the_new_value).format('0,0.00'));
+                // return the_new_value;
+                $('.data-carrency').eq(index).text(theCurrency + ' ' + numeral(the_new_value).format('0,0'));
+                if (theCurrency == "USD") {
+                    $('.data-carrency').eq(index).text(theCurrency + ' ' + numeral(the_new_value).format('0,0.00'));
+                }
+            });
+        });
+        e = "en"
+
     }
 
     function c() { for (var e = document.getElementById("topnav-menu-content").getElementsByTagName("a"), t = 0, s = e.length; t < s; t++) "nav-item dropdown active" === e[t].parentElement.getAttribute("class") && (e[t].parentElement.classList.remove("active"), null !== e[t].nextElementSibling && e[t].nextElementSibling.classList.remove("show")) }

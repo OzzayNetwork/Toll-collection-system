@@ -20,6 +20,22 @@ $(window).on('load', function() {
 
     $('body').on('click', '.minimize', function() {
         $(this).parent().parent().parent().parent().siblings().toggleClass('d-none');
-    })
+    });
+
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://fixer-fixer-currency-v1.p.rapidapi.com/convert?from=UGX&to=USD&amount=12000000",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "fixer-fixer-currency-v1.p.rapidapi.com",
+            "x-rapidapi-key": "e567644a3dmshde69e5218507697p14e1f1jsnbd76df3e5cd5"
+        }
+    };
+
+    $.ajax(settings).done(function(response) {
+        console.log(response);
+        console.log(response.result);
+    });
 
 });
