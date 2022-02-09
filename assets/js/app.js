@@ -32,7 +32,7 @@
             };
 
             $.ajax(settings).done(function(response) {
-                // console.log(response);
+                console.log(response);
                 the_new_value = response.result
                 console.log(numeral(the_new_value).format('0,0.00'));
                 // return the_new_value;
@@ -40,6 +40,7 @@
                 if (theCurrency == "USD") {
                     $('.data-carrency').eq(index).text(theCurrency + ' ' + numeral(the_new_value).format('0,0.00'));
                 }
+
             });
         });
         e = "en"
