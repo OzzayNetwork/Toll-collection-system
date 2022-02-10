@@ -350,6 +350,10 @@
         top: 0;
     }
     
+    .pl-15px {
+        padding-left: 15px !important;
+    }
+    
     .the-inbox .col-mail-1 .checkbox-wrapper-mail {
         margin: 15px 10px 0 20px;
     }
@@ -417,11 +421,11 @@
     }
     
     .the-inbox .dataTables_length {
-        display: none;
+        /* display: none; */
     }
     
     .the-inbox .dataTables_filter {
-        display: none;
+        /* display: none; */
     }
     
     #emailDataTable_info.dataTables_info {
@@ -444,9 +448,11 @@
     
     .table-rows-selector>button {
         /* color: red; */
-        padding-left: 45px;
-        position: relative;
-        padding-right: 45px;
+        padding: .47rem .75rem !important;
+        padding-left: 45px !important;
+        position: relative !important;
+        padding-right: 45px !important;
+        font-size: 13px !important;
     }
     
     .table-rows-selector>button::before {
@@ -467,7 +473,110 @@
         color: #ffffffb3;
     }
     
+    .pr-15px {
+        padding-right: 15px !important;
+    }
+    
+    .pr-20px {
+        padding-right: 20px !important;
+    }
+    
+    .pl-20px {
+        padding-left: 20px !important;
+    }
+    
+    .emailSearch {
+        border: none;
+        height: 38px;
+        padding-left: 40px;
+        padding-right: 20px;
+        background-color: #f3f3f9;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 30px;
+        font-size: 13px;
+    }
+    
+    .emailSearch:focus {
+        background: #f3f3f9 !important;
+        background-color: #f3f3f9 !important;
+    }
+    
+    .dataTables__top {
+        justify-content: space-between;
+        /* padding-top: 25px; */
+        padding-bottom: 25px;
+    }
+    
+    div.dataTables_wrapper div.dataTables_filter input {
+        margin-left: 0px;
+    }
+    
+    .dataTables_filter {
+        padding-right: 15px;
+        padding-left: 15px;
+        flex-grow: 1;
+    }
+    
+    .dataTables_filter label {
+        flex-grow: 1;
+        width: 100%;
+    }
+    
+    .boarder-right-0 {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    
+    .dataTables_filter {
+        position: relative;
+    }
+    
+    .dataTables_filter:before {
+        font-family: boxicons!important;
+        position: absolute;
+        z-index: 10;
+        font-size: 16px;
+        line-height: 38px;
+        left: 35px;
+        bottom: -1px;
+        color: #74788d;
+        content: "\eb2d";
+    }
+    
+    #emailDataTable-btns_wrapper .dataTables__bottom {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+    .dataTables_filter label,
+    .dataTables__top label {
+        margin-bottom: 0px;
+    }
+    
+    .the-inbox .dataTables_wrapper {
+        padding-top: 25px;
+    }
+    
     @media (max-width: 576px) {
+        .dataTables__top .dropdown-toggle i {
+            line-height: revert
+        }
+        .dt-buttons .bx,
+        .dt-buttons .mdi {
+            margin: 0px !important;
+        }
+        .table-rows-selector>button {
+            /* color: red; */
+            padding: .47rem .75rem !important;
+            padding-left: .75rem !important;
+            position: relative !important;
+            padding-right: 30px !important;
+            font-size: 12px !important;
+        }
+        .table-rows-selector>button::before {
+            display: none;
+        }
         .mr-sm-0 {
             margin: 0px !important;
         }
