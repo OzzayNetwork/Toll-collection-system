@@ -20,7 +20,7 @@ $(document).ready(function() {
         "pageLength": 15,
         lengthChange: 15,
         sDom: 'f<"dataTables__top"lfB>rt<"dataTables__bottom"ip><"clear">',
-    }).buttons().container().appendTo("#datatable-buttons_wrapper .col-md-6:eq(0)"), $('.dataTables_length > label').addClass(''), $('.dataTables_length select btn-sm').addClass('form-control selectpicker show-tick table-rows-selector d-flex'), $('.dataTables_filter').eq(1).addClass('d-none d-xl-flex'), $('.dataTables_filter').eq(0).addClass('d-xl-none'), $('.dataTables_length select').attr("data-style", "btn-primary"), $('.dataTables__top').addClass('pr-0 pl-0 d-flex align-items-center w-100'), $('.dataTables_filter input').addClass('emailSearch w-100'), $('#datatable-buttons_filter').addClass('mb-3 d-xl-none'), $('.buttons-copy').prepend('<span class="bx bx-copy font-size-16 align-middle me-2"></span>').children('span').eq(1).addClass('d-none d-xxl-inline'), $('.buttons-pdf').addClass('d-none'), $('.buttons-csv').addClass('d-none'), $('.buttons-excel').addClass('d-none'), $('.buttons-print').prepend('<span class="bx bx-printer font-size-16 align-middle me-2"></span>'), $('#datatable-buttons_wrapper .dt-buttons').prepend(`<div class="dropdown m-0 d-flex">
+    }).buttons().container().appendTo("#datatable-buttons_wrapper .col-md-6:eq(0)"), $('#datatable-buttons_wrapper .dt-buttons').append('<button type="button" class="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#dt__filter" aria-controls="offcanvasRight"><i class="mdi mdi-filter-variant font-size-16 align-middle me-2"></i><span class="d-none d-xxl-inline">Filter</span></button>'), $('.dataTables_length > label').addClass(''), $('.dataTables_length select btn-sm').addClass('form-control selectpicker show-tick table-rows-selector d-flex'), $('.dataTables_filter').eq(1).addClass('d-none d-xl-flex'), $('.dataTables_filter').eq(0).addClass('d-xl-none'), $('.dataTables_length select').attr("data-style", "btn-primary"), $('.dataTables__top').addClass('pr-0 pl-0 d-flex align-items-center w-100'), $('.dataTables_filter input').addClass('emailSearch w-100'), $('#datatable-buttons_filter').addClass('mb-3 d-xl-none'), $('.buttons-copy').prepend('<span class="bx bx-copy font-size-16 align-middle me-2"></span>').children('span').eq(1).addClass('d-none d-xxl-inline'), $('.buttons-pdf').addClass('d-none'), $('.buttons-csv').addClass('d-none'), $('.buttons-excel').addClass('d-none'), $('.buttons-print').prepend('<span class="bx bx-printer font-size-16 align-middle me-2"></span>'), $('#datatable-buttons_wrapper .dt-buttons').prepend(`<div class="dropdown m-0 d-flex">
     <a href="#" class="btn btn-secondary dropdown-toggle boarder-right-0 d-flex" data-bs-toggle="dropdown" aria-expanded="false">
     <i class="bx bxs-download font-size-16 align-middle me-2"></i> <span class="d-none d-xxl-inline">Download</span><i class="mdi mdi-chevron-down"></i>
     </a>
@@ -98,7 +98,8 @@ $(document).ready(function() {
         var theNewVal = $(this).val()
         $('#inputSearch').val(theNewVal)
     });
-    $('.dt-buttons').removeClass('flex-wrap')
+    $('.dt-buttons').removeClass('flex-wrap');
+    $('#datatable-buttons_wrapper .dt-buttons');
 
 
     // // Name of the filename when exported (except for extension)
