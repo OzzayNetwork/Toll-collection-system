@@ -3,8 +3,34 @@ $(document).ready(function() {
     var theTable
     theTable = $("#datatable").DataTable(), $("#datatable-buttons").DataTable({
         lengthChange: !1,
-        buttons: ["copy", "excel", "pdf", "colvis"]
-    }).buttons().container().appendTo("#datatable-buttons_wrapper .col-md-6:eq(0)"), $(".dataTables_length select").addClass("form-select form-select-sm");
+        buttons: ["copy", "print", "excel", "csv", "pdf", "colvis"],
+        language: {
+            searchPlaceholder: "Search through Records ...",
+            search: "",
+            lengthMenu: ` <select name='length_change' class="form-control selectpicker table-rows-selector show-tick" data-style="btn-primary" id='length_change' title="Select A range">
+                            <option value='15'>15 Rows</option>
+                            <option value='50' selected="true">50 Rows</option>
+                            <option value='100'>100 Rows</option>
+                            <option value='150'>150 Rows</option>
+                            <option value='200'>200 Rows</option>
+                            <option value='-1'>All Rows</option>
+                        </select>`
+
+        },
+        "pageLength": 15,
+        lengthChange: 15,
+        sDom: 'f<"dataTables__top"lfB>rt<"dataTables__bottom"ip><"clear">',
+    }).buttons().container().appendTo("#datatable-buttons_wrapper .col-md-6:eq(0)"), $('.dataTables_length > label').addClass(''), $('.dataTables_length select btn-sm').addClass('form-control selectpicker show-tick table-rows-selector d-flex'), $('.dataTables_filter').eq(1).addClass('d-none d-xl-flex'), $('.dataTables_filter').eq(0).addClass('d-xl-none'), $('.dataTables_length select').attr("data-style", "btn-primary"), $('.dataTables__top').addClass('pr-0 pl-0 d-flex align-items-center w-100'), $('.dataTables_filter input').addClass('emailSearch w-100'), $('#datatable-buttons_filter').addClass('mb-3 d-xl-none'), $('.buttons-copy').prepend('<span class="bx bx-copy font-size-16 align-middle me-2"></span>').children('span').eq(1).addClass('d-none d-xxl-inline'), $('.buttons-pdf').addClass('d-none'), $('.buttons-csv').addClass('d-none'), $('.buttons-excel').addClass('d-none'), $('.buttons-print').prepend('<span class="bx bx-printer font-size-16 align-middle me-2"></span>'), $('#datatable-buttons_wrapper .dt-buttons').prepend(`<div class="dropdown m-0 d-flex">
+    <a href="#" class="btn btn-secondary dropdown-toggle boarder-right-0 d-flex" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="bx bxs-download font-size-16 align-middle me-2"></i> <span class="d-none d-xxl-inline">Download</span><i class="mdi mdi-chevron-down"></i>
+    </a>
+
+    <div class="dropdown-menu" style="">
+        <a class="dropdown-item" data-table-action="pdf" href="#">Download as PDF</a>
+        <a class="dropdown-item buttons-html5" data-table-action="excel" aria-controls="datatable-buttons" tabindex="0"  href="#">Download as Excel File</a>
+        <a class="dropdown-item" data-table-action="csv" href="#">Download as CSV file</a>
+    </div>
+</div>`), $('.buttons-print').children('span').eq(1).addClass('d-none d-xxl-inline'), $('.buttons-colvis').prepend('<span class="mdi mdi-eye-check-outline font-size-16 align-middle me-2"></span>').children('span').eq(1).addClass('d-none d-xxl-inline');
 
     var emailTable;
     emailTable = $("#emailDataTable").DataTable(), $("#emailDataTable-btns").DataTable({
@@ -35,7 +61,7 @@ $(document).ready(function() {
 
 
 
-    }).buttons().container().appendTo("#datatable-buttons_wrapper .col-md-6:eq(0)"), $('.dataTables_length > label').addClass(''), $('.dataTables_length select btn-sm').addClass('form-control selectpicker show-tick table-rows-selector d-flex'), $('.dataTables_filter').eq(1).addClass('d-none d-xl-flex'), $('.dataTables_filter').eq(0).addClass('d-xl-none'), $('.dataTables_length select').attr("data-style", "btn-primary"), $('.dataTables__top').addClass('pr-15px pl-15px d-flex align-items-center w-100'), $('.dataTables_filter input').addClass('emailSearch'), $('#emailDataTable-btns_filter').addClass('mb-3 d-xl-none'), $('.buttons-copy').prepend('<span class="bx bx-copy font-size-16 align-middle me-2"></span>').children('span').eq(1).addClass('d-none d-xxl-inline'), $('.buttons-pdf').addClass('d-none'), $('.buttons-csv').addClass('d-none'), $('.buttons-excel').addClass('d-none'), $('.buttons-print').prepend('<span class="bx bx-printer font-size-16 align-middle me-2"></span>'), $('#emailDataTable-btns_wrapper .dt-buttons').prepend(`<div class="dropdown m-0 d-flex">
+    }).buttons().container().appendTo("#datatable-buttons_wrapper .col-md-6:eq(0)"), $('.dataTables_length > label').addClass(''), $('.dataTables_length select btn-sm').addClass('form-control selectpicker show-tick table-rows-selector d-flex'), $('.dataTables_filter').eq(1).addClass('d-none d-xl-flex'), $('.dataTables_filter').eq(0).addClass('d-xl-none'), $('.dataTables_length select').attr("data-style", "btn-primary"), $('.the-inbox .dataTables__top').addClass('pr-15px pl-15px d-flex align-items-center w-100'), $('.dataTables_filter input').addClass('emailSearch w-100'), $('#emailDataTable-btns_filter').addClass('mb-3 d-xl-none'), $('.the-inbox .buttons-copy').prepend('<span class="bx bx-copy font-size-16 align-middle me-2"></span>').children('span').eq(1).addClass('d-none d-xxl-inline'), $('.the-inbox .buttons-pdf').addClass('d-none'), $('.the-inbox .buttons-csv').addClass('d-none'), $('.the-inbox .buttons-excel').addClass('d-none'), $('.the-inbox .buttons-print').prepend('<span class="bx bx-printer font-size-16 align-middle me-2"></span>'), $('#emailDataTable-btns_wrapper .dt-buttons').prepend(`<div class="dropdown m-0 d-flex">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <a href="#" class="btn btn-secondary dropdown-toggle boarder-right-0 d-flex" data-bs-toggle="dropdown" aria-expanded="false">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <i class="bx bxs-download font-size-16 align-middle me-2"></i> <span class="d-none d-xxl-inline">Download</span><i class="mdi mdi-chevron-down"></i>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </a>
@@ -45,7 +71,7 @@ $(document).ready(function() {
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <a class="dropdown-item buttons-html5" data-table-action="excel" aria-controls="emailDataTable-btns" tabindex="0"  href="#">Download as Excel File</a>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <a class="dropdown-item" data-table-action="csv" href="#">Download as CSV file</a>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>`), $('.buttons-print').children('span').eq(1).addClass('d-none d-xxl-inline'), $('.buttons-colvis').prepend('<span class="mdi mdi-eye-check-outline font-size-16 align-middle me-2"></span>').children('span').eq(1).addClass('d-none d-xxl-inline');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>`), $('.the-inbox .buttons-print').children('span').eq(1).addClass('d-none d-xxl-inline'), $('.the-inbox .buttons-colvis').prepend('<span class="mdi mdi-eye-check-outline font-size-16 align-middle me-2"></span>').children('span').eq(1).addClass('d-none d-xxl-inline');
 
     $("body").on("click", "[data-table-action]", function(a) {
         // alert("clicked")
@@ -71,7 +97,8 @@ $(document).ready(function() {
     $('body').on('keyup', '#emailDataTable-btns_filter input', function() {
         var theNewVal = $(this).val()
         $('#inputSearch').val(theNewVal)
-    })
+    });
+    $('.dt-buttons').removeClass('flex-wrap')
 
 
     // // Name of the filename when exported (except for extension)

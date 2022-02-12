@@ -12,10 +12,15 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesbrand" name="author" />
     <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg">
+
 
     <!-- droping file -->
-    <link rel="shortcut icon" href="assets/images/favicon.svg">
     <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- DataTables -->
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
@@ -475,36 +480,11 @@
 
                                             <div class="d-flex align-items-center flex-grow-1">
 
-                                                <div class="btn-group me-2 mb-0 mb-sm-0 mr-15px">
-                                                    <button type="button" class="btn btn-primary waves-light waves-effect d-flex d-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="bx bx-list-ul font-18px d-none d-sm-flex the-data-icon"></i> <i class="mdi mdi-chevron-down ms-1"></i><span class="number-of-rows">45 Rows</span>
-                                                    </button>
-                                                    <div class="dropdown-menu d-noone">
-                                                        <a class="dropdown-item" href="#">15  Rows</a>
-                                                        <a class="dropdown-item" href="#">45  Rows</a>
-                                                        <a class="dropdown-item" href="#">100  Rows</a>
-                                                        <a class="dropdown-item" href="#">All</a>
-                                                    </div>
-
-                                                    <select name='length_change' class="form-control selectpicker table-rows-selector show-tick" data-style="btn-primary" id='length_change'>
-                                                        <option value='5' >5 Rows</option>
-                                                        <option value='50' selected="true">50 Rows</option>
-                                                        <option value='100'>100 Rows</option>
-                                                        <option value='150'>150 Rows</option>
-                                                        <option value='200'>200 Rows</option>
-                                                        <option value='-1'>All Rows</option>
-                                                    </select>
-                                                </div>
 
 
-                                                <form class="app-search d-lg-block mr-15px flex-grow-1 mr-sm-0">
-                                                    <div class="position-relative">
-                                                        <input type="text" class="form-control" placeholder="Search..." id="inputSearch">
-                                                        <span class="bx bx-search-alt"></span>
-                                                    </div>
-                                                </form>
 
-                                                <div class="btn-group me-2 mb-2 mb-sm-0 mr-15px d-none d-sm-flex">
+
+                                                <div class="btn-group me-2 mb-2 mb-sm-0 mr-15px d-none">
                                                     <button type="button" class="btn btn-primary waves-light waves-effect" data-table-action="excel"><i class="fa fa-inbox"></i></button>
                                                     <button type="button" class="btn btn-primary waves-light waves-effect"><i class="fa fa-exclamation-circle"></i></button>
                                                     <button type="button" class="btn btn-primary waves-light waves-effect"><i class="far fa-trash-alt"></i></button>

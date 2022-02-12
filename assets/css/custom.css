@@ -387,7 +387,15 @@
     
     .the-inbox td,
     .the-inbox th {
-        height: 50px;
+        height: 30px;
+    }
+    
+    .div.dt-buttons {
+        width: auto !important;
+    }
+    
+    .dataTables__bottom {
+        padding-bottom: 15px;
     }
     
     .the-inbox tr td:first-child {
@@ -414,6 +422,10 @@
         background-color: rgb(246, 246, 246);
         font-weight: 500;
         color: rgb(41, 45, 50);
+    }
+    
+    .the-inbox tr.unread th {
+        border-left: 5px solid rgb(244, 106, 106);
     }
     
     .ml-7px {
@@ -512,7 +524,14 @@
         margin-left: 0px;
     }
     
-    .dataTables_filter {
+    div.dt-button-collection {
+        left: auto !important;
+    }
+    /* .the-inbox .table>:not(caption)>*>* {
+        padding: 0px;
+    } */
+    
+    .the-inbox .dataTables_filter {
         padding-right: 15px;
         padding-left: 15px;
         flex-grow: 1;
@@ -544,6 +563,48 @@
         content: "\eb2d";
     }
     
+    div.dataTables_wrapper div.dataTables_filter {
+        width: 100%;
+        margin: 0px 20px;
+    }
+    
+    .the-inbox div.dataTables_wrapper div.dataTables_filter {
+        margin: 0px;
+    }
+    
+    .dt-button-collection .dropdown-item:focus,
+    .dt-button-collection .dropdown-item:hover {
+        background-color: #46909f82;
+    }
+    
+    .dt-button-collection .dropdown-item.active {
+        background-color: #46909f2b;
+        position: relative;
+    }
+    
+    .dt-button-collection .dropdown-item {
+        padding-right: 45px;
+    }
+    
+    .dt-button-collection .dropdown-item {
+        padding-right: 30px;
+    }
+    
+    .dt-buttons .buttons-html5,
+    .dt-buttons .btn {
+        display: flex;
+        align-items: center;
+    }
+    
+    #datatable-buttons_filter {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    #datatable-buttons_wrapper .dataTables_filter:before {
+        left: 17px;
+    }
+    
     #emailDataTable-btns_wrapper .dataTables__bottom {
         padding-right: 15px;
         padding-left: 15px;
@@ -556,6 +617,11 @@
     
     .the-inbox .dataTables_wrapper {
         padding-top: 25px;
+    }
+    
+    #emailDataTable-btns_filter {
+        margin-left: 0px;
+        margin-right: 0px;
     }
     
     @media (max-width: 576px) {
@@ -599,5 +665,11 @@
         .px-sm-30px {
             padding-left: 30px !important;
             padding-right: 30px !important;
+        }
+    }
+    
+    @media screen and (max-width: 767px) {
+        div.dt-buttons {
+            width: auto;
         }
     }
