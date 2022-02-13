@@ -639,6 +639,35 @@
                 border-radius: 0px;
             }
             
+            table.logs-table td {
+                vertical-align: top;
+            }
+            
+            table.logs-table tr td:first-child {
+                max-width: 82px;
+                padding-left: 1.25rem;
+                width: 82px;
+            }
+            
+            table.logs-table tr td:last-child {
+                padding-right: 1.25rem;
+            }
+            
+            table.logs-table tr td {
+                padding-top: 1.25rem;
+            }
+            
+            .logs-card .card-body {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            
+            .logs-card .dataTables__top,
+            .logs-card .dataTables__bottom {
+                padding-right: 1.25rem !important;
+                padding-left: 1.25rem !important;
+            }
+            
             @media (max-width: 576px) {
                 .dataTables__top .dropdown-toggle i {
                     line-height: revert
