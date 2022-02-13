@@ -629,6 +629,11 @@
                 cursor: pointer;
             }
             
+            .date-drop-input,
+            .datepicker-days .day {
+                cursor: pointer;
+            }
+            
             .alert-border {
                 border: 0.5px solid #556ee657;
                 border-radius: 0px;
