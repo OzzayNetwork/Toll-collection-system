@@ -2,6 +2,9 @@ setTimeout(function() {
     $("#subscribeModal").modal("show")
 }, 2e3);
 
+//the radial
+
+
 // annual collections graph
 var annual_options = {
         chart: {
@@ -381,14 +384,8 @@ options = {
         title: {
             text: "Amount in UGX",
             style: { fontWeight: "500" }
-        },
-        labels: {
-            formatter: function(value) {
-                return numeral(value).format('0,0 a')
-            },
-        },
+        }
     },
-
     grid: { borderColor: "#f1f1f1" },
     fill: { opacity: 1 },
     tooltip: {
@@ -428,15 +425,14 @@ options = {
     yaxis: {
         title: {
             text: "Amount in UGX",
-            style: { fontWeight: "500" }
-        },
-        labels: {
-            formatter: function(value) {
-                return numeral(value).format('0,0 a')
+            style: { fontWeight: "500" },
+            labels: {
+                formatter: function(value) {
+                    return numeral(value).format('0,0 a')
+                },
             },
-        },
+        }
     },
-
     grid: { borderColor: "#f1f1f1" },
     fill: { opacity: 1 },
     tooltip: {
@@ -478,18 +474,7 @@ options = {
         categories: ["Apr 1st", "Apr 2nd", "Apr 3rd", "Apr 4th", "Apr 5th", "Apr 6th", "Apr th", "Apr 8th", "Apr 9th", "Apr 10th", "Apr 11th", "Apr 12th"]
 
     },
-    yaxis: {
-        title: {
-            text: "Amount in UGX",
-            style: { fontWeight: "500" }
-        },
-        labels: {
-            formatter: function(value) {
-                return numeral(value).format('0,0 a')
-            },
-        },
-    },
-
+    yaxis: { title: { text: "Amount in UGX", style: { fontWeight: "500" } } },
     grid: { borderColor: "#f1f1f1" },
     fill: { opacity: 1 },
     tooltip: {
@@ -531,17 +516,7 @@ options = {
         categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
     },
-    yaxis: {
-        title: {
-            text: "Amount in UGX",
-            style: { fontWeight: "500" }
-        },
-        labels: {
-            formatter: function(value) {
-                return numeral(value).format('0,0 a')
-            },
-        },
-    },
+    yaxis: { title: { text: "Amount in UGX", style: { fontWeight: "500" } } },
 
 
     grid: { borderColor: "#f1f1f1" },
@@ -556,6 +531,8 @@ options = {
     },
 };
 (chart = new ApexCharts(document.querySelector("#stacked-column-chart-year"), options)).render();
+
+
 
 //the radial
 chart.render();
